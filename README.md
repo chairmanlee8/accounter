@@ -28,6 +28,8 @@ FIXME: listing of options this app accepts.
 ### That You Think
 ### Might be Useful
 
+https://rasterize.io/blog/clojure-the-good-parts.html
+
 ## License
 
 Copyright © 2016 FIXME

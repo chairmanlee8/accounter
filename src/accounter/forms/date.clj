@@ -6,6 +6,7 @@
 (declare as-dates)
 (declare as-date)
 (declare coerce-date)
+(declare best-of-order)
 
 ;; takes a list of strings containing exactly 3 numeric components and returns the most likely conversion
 ;; to date. this is computed by using as-date to generate permutations and selecting the permutation number

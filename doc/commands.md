@@ -1,26 +1,42 @@
 # Create account
 
-    account create
+    account create <identifier> <category>
+    account create amex credit
 
-    Account identifer? amex
-    Category? credit
+    account list
+
+    [ Category | Account ]
+    [ -------- | ------- ]
+    [ credit   | amex    ]
 
 # Import transactions
 
     account import <file>
 
-    3 non-empty columns found:
-    [show abbreviated table]
+    Guessing the following table format:
 
-    Which column contains transaction post dates?
-    Which column contains transaction descriptions?
-    Which column contains transaction amounts?
+    [ Transaction Post Date | Amount | Description ]
+    [ --------------------- | ------ | ----------- ]
+    [ sample data... ]
 
-    Transaction "FOOBAR"
-    Posted 4/16/2016 for $99.99
-    Tags? [Tab]
-    Tags used in the account so far: food recreation travel payment
+    Continue? [y/n]
+    Entering tagging mode for x transactions...
 
-    Tags? food
+    4/16/2016  9.99  FOOBAR : default guessed tags :: add ^remove (^@ to remove all)
+    ...
 
 # Generate monthly report
+
+    account report spending --show-accounts
+    account report spending <month/year>
+
+    MTD (month-to-date)
+
+    [ Tag    | amex  | citi  | chasebcp | Total  ]
+    [ ------ | ----- | ----- | -------- | ------ ]
+    [ food   | 45.79 | 12.24 | 34.67    | 124.67 ]
+
+    Previous month
+
+
+    account configure report spending

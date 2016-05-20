@@ -1,7 +1,17 @@
 (ns accounter.core
+  (use [table.core :only [table]])
   (:gen-class))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
+(def table-style
+  {:top ["" "" ""]
+   :top-dash ""
+   :middle ["[ " " | " " ]"]
+   :dash "─"
+   :bottom ["" "" ""]
+   :bottom-dash ""
+   :header-walls ["[ " " | " " ]"]
+   :body-walls ["[ " " | " " ]"]})
+
+(defn -main [& args]
+  (table [["Category" "Account"] ["credit" "amex"]] :style table-style)
+  (System/exit 0))

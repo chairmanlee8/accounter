@@ -1,3 +1,7 @@
+# User management
+
+    account use <username>
+
 # Create account
 
     account create <identifier> <category>

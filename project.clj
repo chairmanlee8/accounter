@@ -8,7 +8,8 @@
                  [org.clojure/math.combinatorics "0.1.1"],
                  [clojure-csv/clojure-csv "2.0.1"],
                  [clj-time "0.11.0"],
-                 [table "0.5.0"]]
+                 [table "0.5.0"],
+                 [com.velisco/tagged "0.4.1"]]
   :main ^:skip-aot accounter.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

@@ -1,9 +1,11 @@
-import requests, time
+import os, requests, time
+import mydropbox
 
-api_key = ""
-api_secret = ""
+edmunds = mydropbox.get_keys('edmunds')
+api_key = edmunds['api_key']
+api_secret = edmunds['api_secret']
 
-vin = ""
+vin = mydropbox.read_dropbox_file(os.path.join('Records', 'Financials', 'Car', 'VIN')).strip()
 r = requests.get("https://api.edmunds.com/api/vehicle/v2/vins/%s?&fmt=json&api_key=%s" % (vin, api_key))
 car = r.json()
 

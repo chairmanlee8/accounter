@@ -8,7 +8,10 @@ def get_dropbox_folder():
     s = platform.system()
 
     if s in ['Linux', 'Darwin']:
-        raise NotImplementedError
+        opt = os.path.join(os.path.expanduser('~'), '.dropbox', 'info.json')
+        with open(opt, 'r') as f:
+            j = json.loads(f.read())
+            return j['personal']['path']
     elif s in ['Windows']:
         opt1 = os.path.join(os.getenv('APPDATA'), 'Dropbox', 'info.json')
         opt2 = os.path.join(os.getenv('LOCALAPPDATA'), 'Dropbox', 'info.json')

@@ -25,8 +25,8 @@ for colorcat in car['colors']:
         colorids.append(str(opt['id']))
 
 # User-supplied
-condition = "Outstanding"
-mileage = "2500"
+condition = "Clean"
+mileage = "6000"
 zipcode = "60613"
 
 r = requests.get(
